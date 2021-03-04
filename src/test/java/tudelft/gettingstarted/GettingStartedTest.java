@@ -5,23 +5,24 @@ import org.junit.jupiter.api.Test;
 
 public class GettingStartedTest {
 
-    @Test
-    public void addFiveTo20() {
+    @Test // indicates that the following is a JUnit test
+
+    // test passing the number 20 to the addFive function:
+    public void addFiveToTwenty() {
         int result = new GettingStarted().addFive(20);
-        Assertions.assertEquals(25,result);
+        Assertions.assertEquals(25, result);
     }
 
-//    UNCOMMENT THE CODE BELOW, AND FILL THE GAPS!
+    @Test
+     public void addFiveToZero() {
+        int result = new GettingStarted().addFive(0);
+        Assertions.assertEquals(5, result);
+    }
 
-//    @Test
-//    public void addFiveToZero() {
-//        int result = new GettingStarted().addFive(???);
-//        Assertions.assertEquals(???, result);
-//    }
-//
-//    @Test
-//    public void addFiveToMinus20() {
-//        int result = new GettingStarted().addFive(???);
-//        Assertions.assertEquals(????,result);
-//    }
+    @Test
+     public void addFiveToMinusTwenty() {
+        // Note: Can't use hyphen, must use minus symbol... en dash?
+        int result = new GettingStarted().addFive(-20);
+        Assertions.assertEquals(-15, result);
+    }
 }
